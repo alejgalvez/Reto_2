@@ -1,0 +1,246 @@
+
+.seccion-heroe {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://i.pinimg.com/originals/6d/3f/c9/6d3fc989786458c1e3b89c7a2090e68a.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.superpuesta-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 1;
+}
+
+/* Navigation Arrows */
+.flecha-navegacion {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  padding: 0;
+}
+
+.flecha-navegacion:hover {
+  background: none;
+  border: none;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.flecha-navegacion img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.flecha-izquierda {
+  left: 30px;
+}
+
+.flecha-derecha {
+  right: 30px;
+}
+
+/* Movie Content */
+.contenido-pelicula {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-pelicula {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.estudio-pelicula {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.titulo-pelicula {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.linea-titulo {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.linea-titulo:first-child {
+  color: #ffffff;
+}
+
+.linea-titulo:last-child {
+  color: #ffffff;
+}
+
+.detalles-pelicula {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+.acciones-pelicula {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.boton-accion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #DC143C;
+  color: #ffffff;
+}
+
+.boton-accion svg {
+  width: 18px;
+  height: 18px;
+}
+
+.boton-accion img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.boton-anadir {
+  min-width: 120px;
+}
+
+.boton-anadir:hover {
+  background-color: #B71C1C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+}
+
+.boton-favorito {
+  padding: 10px;
+  min-width: 45px;
+}
+
+.boton-favorito:hover {
+  background-color: #B71C1C;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.4);
+}
+
+@media (max-width: 768px) {
+  .barra-navegacion {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-izquierda {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .enlaces-navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .linea-titulo {
+    font-size: 48px;
+  }
+
+  .flecha-navegacion {
+    width: 40px;
+    height: 40px;
+  }
+
+  .flecha-izquierda {
+    left: 15px;
+  }
+
+  .flecha-derecha {
+    right: 15px;
+  }
+
+  .acciones-pelicula {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .boton-accion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .linea-titulo {
+    font-size: 36px;
+  }
+
+  .estudio-pelicula {
+    font-size: 12px;
+  }
+
+  .detalles-pelicula {
+    font-size: 14px;
+  }
+
+  .texto-logo {
+    font-size: 20px;
+  }
+
+  .enlaces-navegacion {
+    font-size: 14px;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Lumina</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <script src="/javascripts/main.js" defer></script>
+  </head>
+  <body class="pagina-sesion">
+    <div class="contenedor-sesion">
+      <div class="tarjeta-sesion">
+ 
+        <div class="encabezado-sesion">
+          <div class="icono-sesion">
+            <img src="/images/film.png" alt="Logo Lumina" style="width:60px; height:60px;">
+          </div>
+          <div class="seccion-titulo-sesion">
+            <h1 class="titulo-sesion">Iniciar Sesión</h1>
+            <p class="descripcion-sesion">Inicia sesión para disfrutar de nuestro catálogo de películas y series personalizadas.</p>
+          </div>
+        </div>
+
+
+        <form class="formulario-sesion" action="/login" method="POST">
+          <div class="grupo-formulario">
+            <label for="usuario" class="etiqueta-formulario">usuario:</label>
+            <input type="text" id="usuario" name="username" class="entrada-formulario">
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="contrasena" class="etiqueta-formulario">contraseña:</label>
+            <input type="password" id="contrasena" name="password" class="entrada-formulario">
+          </div>
+
+          <button type="submit" class="boton-envio-sesion">Acceder</button>
+
+          <div class="contrasena-olvidada">
+            <a href="#" class="enlace-contrasena-olvidada">¿Has olvidado la contraseña?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+

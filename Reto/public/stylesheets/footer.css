@@ -1,0 +1,36 @@
+/* Estilos para el footer */
+#pie {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #333;
+}
+
+#pie p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+#pie a {
+    color: #4a9eff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#pie a:hover {
+    color: #6bb3ff;
+    text-decoration: underline;
+}
+
+/* Asegurar que el body tenga altura mínima para que el footer quede abajo */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

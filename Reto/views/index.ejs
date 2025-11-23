@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Streaming</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <script src="/javascripts/main.js" defer></script>
+  </head>
+  <body>
+
+    <nav class="barra-navegacion">
+      <div class="nav-izquierda">
+        <div class="logo">
+          <img src="/images/film.png" alt="Logo Lumina" style="width:40px; height:40px;">
+          <span class="texto-logo">Lumina</span>
+        </div>
+        <ul class="enlaces-navegacion">
+          <li><a href="/" class="activo">Inicio</a></li>
+          <li><a href="/collection">Mi colección</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="/support">Soporte</a></li>
+        </ul>
+      </div>
+      <div class="nav-derecha">
+        <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
+          <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
+        </a>
+      </div>
+    </nav>
+
+
+    <main class="seccion-heroe">
+      <div class="superpuesta-fondo"></div>
+      
+
+      <button class="flecha-navegacion flecha-izquierda" aria-label="Anterior">
+        <img src="/images/left-arrow.png" alt="Flecha izquierda" style="width:40px; height:40px;">
+      </button>
+      
+      <button class="flecha-navegacion flecha-derecha" aria-label="Siguiente">
+        <img src="/images/right-arrow.png" alt="Flecha derecha" style="width:40px; height:40px;">
+      </button>
+
+   
+      <div class="contenido-pelicula">
+        <div class="info-pelicula">
+          <div class="estudio-pelicula">MARVEL STUDIOS</div>
+          <h1 class="titulo-pelicula">
+            <span class="linea-titulo">CAPTAIN AMERICA</span>
+            <span class="linea-titulo">CIVIL WAR</span>
+          </h1>
+          <div class="detalles-pelicula">2016 • 2h 27 minutos • HD</div>
+          <div class="acciones-pelicula">
+            <button class="boton-accion boton-anadir">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+              <span>Añadir</span>
+            </button>
+            <button class="boton-accion boton-favorito" aria-label="Añadir a favoritos">
+              <img src="/images/favourite.png" alt="Favoritos">
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

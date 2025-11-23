@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - Lumina</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/support.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+    <script src="/javascripts/main.js" defer></script>
+  </head>
+  <body class="pagina-soporte">
+  
+    <nav class="barra-navegacion">
+      <div class="nav-izquierda">
+        <div class="logo">
+          <img src="/images/film.png" alt="Logo Lumina" style="width:40px; height:40px;">
+          <span class="texto-logo">Lumina</span>
+        </div>
+        <ul class="enlaces-navegacion">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/collection">Mi colección</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="/support" class="activo">Soporte</a></li>
+        </ul>
+      </div>
+      <div class="nav-derecha">
+        <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
+          <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
+        </a>
+      </div>
+    </nav>
+
+    <main class="soporte-principal">
+      <h1 class="titulo-soporte">Ayuda</h1>
+      
+      <p class="descripcion-soporte">
+        Si tienes cualquier duda o problema con nuestra aplicación, nuestro equipo de soporte está disponible para ayudarte.
+      </p>
+
+      <form class="formulario-soporte" action="/support" method="POST">
+        <div class="grupo-formulario">
+          <label for="correo" class="etiqueta-formulario">Correo electrónico:</label>
+          <input type="email" id="correo" name="email" class="entrada-formulario" placeholder="tu@email.com">
+        </div>
+
+        <div class="grupo-formulario">
+          <label for="mensaje" class="etiqueta-formulario">Mensaje:</label>
+          <textarea id="mensaje" name="message" class="area-texto-formulario" rows="6" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit" class="boton-envio-soporte">Enviar</button>
+      </form>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
+
