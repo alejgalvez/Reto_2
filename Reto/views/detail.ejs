@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/collection.css' />
+    <link rel='stylesheet' href='/stylesheets/footer.css' />
+  </head>
+  <body class="pagina-coleccion">
+
+    <nav class="barra-navegacion">
+      <div class="nav-izquierda">
+        <div class="logo">
+          <img src="/images/film.png" alt="Logo Lumina" style="width:40px; height:40px;">
+          <span class="texto-logo">Lumina</span>
+        </div>
+        <ul class="enlaces-navegacion">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/collection" class="activo">Mi colección</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="/support">Soporte</a></li>
+        </ul>
+      </div>
+      <div class="nav-derecha">
+        <% if (isLoggedIn) { %>
+          <form action="/logout" method="GET" style="display:inline;">
+            <button type="submit" class="boton-sesion" aria-label="Cerrar sesión" style="background:none;border:none;cursor:pointer;">
+              <img src="/images/logout.png" alt="Icono de logout" style="width:40px; height:40px;">
+            </button>
+          </form>
+        <% } else { %>
+          <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
+            <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
+          </a>
+        <% } %>
+      </div>
+    </nav>
+
+    <main class="coleccion-principal">
+      <h1 class="titulo-coleccion"><%= pelicula.titulo %></h1>
+
+      <div class="cuadricula-peliculas" style="display:flex; justify-content:center;">
+        <div class="tarjeta-pelicula" style="display:flex; gap:24px; align-items:flex-start;">
+          <div class="cartel-pelicula">
+            <img src="<%= pelicula.posterUrl %>" alt="<%= pelicula.titulo %>">
+          </div>
+          <div class="info-detalle-pelicula" style="margin-top: 16px; text-align:left;">
+            <p><strong>Género:</strong>
+              <% if (pelicula.genero && pelicula.genero.length) { %>
+                <%= pelicula.genero.join(', ') %>
+              <% } else { %>
+                No especificado
+              <% } %>
+            </p>
+
+            <p>
+              <strong>Año:</strong> <%= pelicula.anio %> <br>
+              <strong>Duración:</strong> <%= pelicula.duracionMin %> min
+            </p>
+
+            <p>
+              <strong>Director:</strong>
+              <%= pelicula.director || 'No especificado' %>
+            </p>
+
+            <p>
+              <strong>Descripción:</strong><br>
+              <%= pelicula.sinopsis %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section style="margin-top: 32px;">
+        <h2 class="titulo-coleccion" style="font-size: 1.4rem;">Copias disponibles</h2>
+        <% if (pelicula.copias && pelicula.copias.length) { %>
+          <ul style="list-style:none; padding:0; max-width:400px; margin:16px auto 0;">
+            <% pelicula.copias.forEach(function(copia, index) { %>
+              <li style="padding:8px 12px; margin-bottom:8px; border-radius:8px; background:#1f2933; display:flex; justify-content:space-between;">
+                <span><strong>Copia <%= index + 1 %></strong></span>
+                <span><strong>Estado:</strong> <%= copia.estado %></span>
+                <span><strong>Formato:</strong> <%= copia.formato %></span>
+              </li>
+            <% }) %>
+          </ul>
+        <% } else { %>
+          <p style="text-align:center; margin-top:16px;">No hay copias registradas para esta película.</p>
+        <% } %>
+      </section>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <a href="/collection" class="boton-envio-sesion">Volver a la colección</a>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>
+
+

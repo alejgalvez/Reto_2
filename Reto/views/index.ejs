@@ -24,9 +24,17 @@
         </ul>
       </div>
       <div class="nav-derecha">
-        <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
-          <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
-        </a>
+        <% if (isLoggedIn) { %>
+          <form action="/logout" method="GET" style="display:inline;">
+            <button type="submit" class="boton-sesion" aria-label="Cerrar sesión" style="background:none;border:none;cursor:pointer;">
+              <img src="/images/logout.png" alt="Icono de logout" style="width:40px; height:40px;">
+            </button>
+          </form>
+        <% } else { %>
+          <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
+            <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
+          </a>
+        <% } %>
       </div>
     </nav>
 

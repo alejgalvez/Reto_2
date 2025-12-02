@@ -1,0 +1,119 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "Reyes del Futuro",
+      "posterUrl": "https://edit.org/img/blog/nld-cartel-pelicula-poster-cine-editable-online-gratis-personalizable.webp",
+      "anio": 2023,
+      "genero": ["Ciencia ficción", "Aventura"],
+      "sinopsis": "En un mundo dominado por la tecnología cuántica, un grupo de jóvenes descubre que puede reescribir la historia y debe decidir qué futuro quiere crear.",
+      "duracionMin": 128,
+      "director": "Lucía Fernández",
+      "copias": [
+        { "estado": "Disponible", "formato": "Blu-ray" },
+        { "estado": "Alquilada", "formato": "DVD" },
+        { "estado": "Reservada", "formato": "Digital 4K" }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "John Wick 3",
+      "posterUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-ebfefbf4ede371be0f6f9148ccd4d393_screen.jpg?ts=1698538444",
+      "anio": 2019,
+      "genero": ["Acción", "Thriller"],
+      "sinopsis": "Con un precio por su cabeza, John Wick debe abrirse camino entre asesinos de todo el mundo para sobrevivir una noche más.",
+      "duracionMin": 131,
+      "director": "Chad Stahelski",
+      "copias": [
+        { "estado": "Disponible", "formato": "Digital HD" },
+        { "estado": "Disponible", "formato": "Blu-ray" },
+        { "estado": "Alquilada", "formato": "DVD" }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Matrix",
+      "posterUrl": "https://im.ziffdavisinternational.com/ign_es/screenshot/default/matrix_c1cf.jpg",
+      "anio": 1999,
+      "genero": ["Ciencia ficción", "Acción"],
+      "sinopsis": "Un hacker descubre que la realidad que conoce es una simulación y se une a la rebelión para liberar a la humanidad.",
+      "duracionMin": 136,
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "copias": [
+        { "estado": "Disponible", "formato": "DVD" },
+        { "estado": "Disponible", "formato": "Digital HD" }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "The Batman",
+      "posterUrl": "https://es.web.img3.acsta.net/pictures/22/01/27/16/40/2914301.jpg",
+      "anio": 2022,
+      "genero": ["Acción", "Crimen", "Superhéroes"],
+      "sinopsis": "En sus primeros años como vigilante, Batman investiga una serie de crímenes que destapan la corrupción de Gotham.",
+      "duracionMin": 176,
+      "director": "Matt Reeves",
+      "copias": [
+        { "estado": "Disponible", "formato": "Digital 4K" },
+        { "estado": "Reservada", "formato": "Blu-ray" }
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Batman v Superman: Dawn of Justice",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+      "anio": 2016,
+      "genero": ["Acción", "Superhéroes"],
+      "sinopsis": "Mientras el mundo cuestiona las acciones de Superman, Batman decide enfrentarse a él sin saber que una amenaza mayor se prepara en la sombra.",
+      "duracionMin": 151,
+      "director": "Zack Snyder",
+      "copias": [
+        { "estado": "Disponible", "formato": "Blu-ray" },
+        { "estado": "Alquilada", "formato": "DVD" }
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Mulán",
+      "posterUrl": "https://lumiere-a.akamaihd.net/v1/images/mul_225_n550x750_4b0e5f82.png?region=2,32,548,661",
+      "anio": 1998,
+      "genero": ["Animación", "Aventura"],
+      "sinopsis": "Una joven china se hace pasar por hombre para ocupar el lugar de su padre en el ejército y defender a su país de la invasión.",
+      "duracionMin": 88,
+      "director": "Tony Bancroft, Barry Cook",
+      "copias": [
+        { "estado": "Disponible", "formato": "DVD" },
+        { "estado": "Disponible", "formato": "Digital HD" }
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Plan de Fuga",
+      "posterUrl": "https://www.premiosgoya.com/wp-content/uploads/2016/11/system/uploads/feature_film/poster/339/Sin_t_tulo-320x457.png",
+      "anio": 2016,
+      "genero": ["Thriller", "Crimen"],
+      "sinopsis": "Un experto en cajas fuertes es reclutado para un atraco que pronto se convierte en una trampa mortal.",
+      "duracionMin": 105,
+      "director": "Iñaki Dorronsoro",
+      "copias": [
+        { "estado": "Disponible", "formato": "DVD" },
+        { "estado": "Alquilada", "formato": "Blu-ray" }
+      ]
+    },
+    {
+      "id": 8,
+      "titulo": "Tortugas Ninja",
+      "posterUrl": "https://es.web.img3.acsta.net/pictures/16/05/10/10/32/590668.jpg",
+      "anio": 2014,
+      "genero": ["Acción", "Aventura"],
+      "sinopsis": "Cuatro tortugas mutantes adolescentes que viven en las alcantarillas de Nueva York deben detener a Shredder y su clan.",
+      "duracionMin": 101,
+      "director": "Jonathan Liebesman",
+      "copias": [
+        { "estado": "Disponible", "formato": "Digital HD" },
+        { "estado": "Reservada", "formato": "Blu-ray" }
+      ]
+    }
+  ]
+}
+

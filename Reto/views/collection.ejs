@@ -27,9 +27,17 @@
       </ul>
     </div>
     <div class="nav-derecha">
-      <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
-        <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
-      </a>
+      <% if (isLoggedIn) { %>
+        <form action="/logout" method="GET" style="display:inline;">
+          <button type="submit" class="boton-sesion" aria-label="Cerrar sesión" style="background:none;border:none;cursor:pointer;">
+            <img src="/images/logout.png" alt="Icono de logout" style="width:40px; height:40px;">
+          </button>
+        </form>
+      <% } else { %>
+        <a href="/login" class="boton-sesion" aria-label="Iniciar sesión">
+          <img src="/images/login.png" alt="Icono de login" style="width:40px; height:40px;">
+        </a>
+      <% } %>
     </div>
   </nav>
 
@@ -38,76 +46,20 @@
     <h1 class="titulo-coleccion">Mi colección</h1>
 
     <div class="cuadricula-peliculas">
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img
-            src="https://edit.org/img/blog/nld-cartel-pelicula-poster-cine-editable-online-gratis-personalizable.webp"
-            alt="Reyes del Futuro">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img
-            src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-ebfefbf4ede371be0f6f9148ccd4d393_screen.jpg?ts=1698538444"
-            alt="Jhon Wick 3">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img src="https://im.ziffdavisinternational.com/ign_es/screenshot/default/matrix_c1cf.jpg" alt="Matrix">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img src="https://es.web.img3.acsta.net/pictures/22/01/27/16/40/2914301.jpg" alt="The Batman">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img src="https://image.tmdb.org/t/p/w500/5UsK3grJvtQrtzEgqNlDljJW96w.jpg"
-            alt="Batman v Superman: Dawn of Justice">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img src="https://lumiere-a.akamaihd.net/v1/images/mul_225_n550x750_4b0e5f82.png?region=2,32,548,661"
-            alt="Mulan">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img
-            src="https://www.premiosgoya.com/wp-content/uploads/2016/11/system/uploads/feature_film/poster/339/Sin_t_tulo-320x457.png"
-            alt="Plan de Fuga">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
-
-
-      <div class="tarjeta-pelicula">
-        <div class="cartel-pelicula">
-          <img src="https://es.web.img3.acsta.net/pictures/16/05/10/10/32/590668.jpg" alt="Tortugas Ninja">
-        </div>
-        <button class="boton-eliminar">Eliminar</button>
-      </div>
+      <% if (peliculas && peliculas.length) { %>
+        <% peliculas.forEach(function(pelicula) { %>
+          <div class="tarjeta-pelicula">
+            <a href="/collection/<%= pelicula.id %>">
+              <div class="cartel-pelicula">
+                <img src="<%= pelicula.posterUrl %>" alt="<%= pelicula.titulo %>">
+              </div>
+            </a>
+            <button class="boton-eliminar">Eliminar</button>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p class="sin-peliculas">No tienes películas en tu colección.</p>
+      <% } %>
     </div>
   </main>
 

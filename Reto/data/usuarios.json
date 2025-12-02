@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "username": "usuario",
+      "password": "1234"
+    },
+    {
+      "username": "usuario2",
+      "password": "5678",
+      "peliculasIds": [1, 3, 5]
+    }
+  ]
+}
+

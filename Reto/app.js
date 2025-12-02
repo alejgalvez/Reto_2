@@ -19,6 +19,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middleware para hacer disponible el estado de login en las vistas
+app.use(function(req, res, next) {
+  res.locals.isLoggedIn = req.cookies && req.cookies.isLoggedIn === 'true';
+  next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

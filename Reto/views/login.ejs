@@ -26,19 +26,19 @@
         <form class="formulario-sesion" action="/login" method="POST">
           <div class="grupo-formulario">
             <label for="usuario" class="etiqueta-formulario">usuario:</label>
-            <input type="text" id="usuario" name="username" class="entrada-formulario">
+            <input type="text" id="usuario" name="username" class="entrada-formulario" placeholder="usuario/usuario2" required>
           </div>
 
           <div class="grupo-formulario">
             <label for="contrasena" class="etiqueta-formulario">contraseña:</label>
-            <input type="password" id="contrasena" name="password" class="entrada-formulario">
+            <input type="password" id="contrasena" name="password" class="entrada-formulario" placeholder="1234/5678" required>
           </div>
 
           <button type="submit" class="boton-envio-sesion">Acceder</button>
 
-          <div class="contrasena-olvidada">
-            <a href="#" class="enlace-contrasena-olvidada">¿Has olvidado la contraseña?</a>
-          </div>
+          <% if (typeof error !== 'undefined' && error) { %>
+            <p style="color: #ff6b6b; margin-top: 10px;"><%= error %></p>
+          <% } %>
         </form>
       </div>
     </div>
